@@ -11841,6 +11841,9 @@ Source: www.kingbright.com</description>
 <part name="P+13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="P+14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11848,19 +11851,63 @@ Source: www.kingbright.com</description>
 <text x="175.26" y="116.84" size="1.778" layer="91">MicroProcessor</text>
 <text x="152.4" y="180.34" size="1.778" layer="91">Power Noise Cancelling</text>
 <text x="88.9" y="175.26" size="1.778" layer="91">ICSP Input</text>
-<text x="215.9" y="177.8" size="1.778" layer="91">Visual Indicators</text>
+<text x="236.22" y="177.8" size="1.778" layer="91">Visual Indicators</text>
 <text x="86.36" y="129.54" size="1.778" layer="91">Host Computer
 Short Protection
 Fuse</text>
-<text x="88.9" y="106.68" size="1.778" layer="91">USB Input</text>
+<text x="81.28" y="101.6" size="1.778" layer="91">USB Input</text>
 <text x="86.36" y="53.34" size="1.778" layer="91">Audio Input from Microphone Daughter Board</text>
-<wire x1="81.28" y1="55.88" x2="81.28" y2="27.94" width="0.1524" layer="97"/>
-<wire x1="81.28" y1="27.94" x2="139.7" y2="27.94" width="0.1524" layer="97"/>
-<wire x1="139.7" y1="27.94" x2="139.7" y2="55.88" width="0.1524" layer="97"/>
-<wire x1="139.7" y1="55.88" x2="81.28" y2="55.88" width="0.1524" layer="97"/>
 <text x="38.1" y="165.1" size="1.778" layer="91">ECE411 Group 3
 Preliminary PCB Schematic
 Voice Recognition Processor</text>
+<wire x1="147.32" y1="185.42" x2="180.34" y2="185.42" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="180.34" y1="185.42" x2="185.42" y2="180.34" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="185.42" y1="180.34" x2="185.42" y2="149.86" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="185.42" y1="149.86" x2="180.34" y2="144.78" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="180.34" y1="144.78" x2="152.4" y2="144.78" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="152.4" y1="144.78" x2="149.86" y2="147.32" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="149.86" y1="147.32" x2="147.32" y2="147.32" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="147.32" y1="147.32" x2="147.32" y2="185.42" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="76.2" y1="182.88" x2="109.22" y2="182.88" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="109.22" y1="182.88" x2="114.3" y2="177.8" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="114.3" y1="177.8" x2="114.3" y2="152.4" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="114.3" y1="152.4" x2="109.22" y2="147.32" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="109.22" y1="147.32" x2="71.12" y2="147.32" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="71.12" y1="147.32" x2="71.12" y2="177.8" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="71.12" y1="177.8" x2="76.2" y2="182.88" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="76.2" y1="139.7" x2="78.74" y2="139.7" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="78.74" y1="139.7" x2="111.76" y2="139.7" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="111.76" y1="139.7" x2="127" y2="124.46" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="127" y1="124.46" x2="127" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="127" y1="96.52" x2="124.46" y2="93.98" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="124.46" y1="93.98" x2="78.74" y2="93.98" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="78.74" y1="93.98" x2="78.74" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="78.74" y1="96.52" x2="73.66" y2="101.6" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="73.66" y1="101.6" x2="73.66" y2="134.62" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="73.66" y1="134.62" x2="78.74" y2="139.7" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="83.82" y1="58.42" x2="134.62" y2="58.42" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="134.62" y1="58.42" x2="142.24" y2="50.8" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="142.24" y1="50.8" x2="142.24" y2="25.4" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="142.24" y1="25.4" x2="134.62" y2="17.78" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="134.62" y1="17.78" x2="88.9" y2="17.78" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="88.9" y1="17.78" x2="76.2" y2="30.48" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="76.2" y1="30.48" x2="76.2" y2="50.8" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="76.2" y1="50.8" x2="83.82" y2="58.42" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="215.9" y1="180.34" x2="269.24" y2="180.34" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="269.24" y1="180.34" x2="271.78" y2="177.8" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="271.78" y1="177.8" x2="271.78" y2="106.68" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="271.78" y1="106.68" x2="261.62" y2="106.68" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="261.62" y1="106.68" x2="256.54" y2="101.6" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="256.54" y1="101.6" x2="233.68" y2="101.6" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="233.68" y1="101.6" x2="210.82" y2="124.46" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="210.82" y1="124.46" x2="210.82" y2="175.26" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="210.82" y1="175.26" x2="215.9" y2="180.34" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="114.3" y1="43.18" x2="106.68" y2="35.56" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="243.84" y1="86.36" x2="269.24" y2="86.36" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="269.24" y1="86.36" x2="269.24" y2="43.18" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="269.24" y1="43.18" x2="243.84" y2="43.18" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="243.84" y1="43.18" x2="243.84" y2="86.36" width="0.1524" layer="97" style="shortdash"/>
+<text x="248.92" y="83.82" size="1.778" layer="91">Servo Output</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="276.86" y="2.54" smashed="yes" rot="R90">
@@ -11884,53 +11931,53 @@ Voice Recognition Processor</text>
 <attribute name="NAME" x="107.95" y="100.5586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="107.95" y="95.758" size="1.778" layer="96"/>
 </instance>
-<instance part="R3" gate="G$1" x="238.76" y="129.54" smashed="yes" rot="R90">
+<instance part="R3" gate="G$1" x="259.08" y="129.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="257.5814" y="125.73" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="262.382" y="125.73" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R4" gate="G$1" x="223.52" y="48.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="222.0214" y="44.45" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="226.822" y="44.45" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R5" gate="G$1" x="238.76" y="129.54" smashed="yes" rot="R90">
 <attribute name="NAME" x="237.2614" y="125.73" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="242.062" y="125.73" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R4" gate="G$1" x="236.22" y="48.26" smashed="yes" rot="R90">
-<attribute name="NAME" x="234.7214" y="44.45" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="239.522" y="44.45" size="1.778" layer="96" rot="R90"/>
+<instance part="WARNING-ORNG" gate="G$1" x="231.14" y="139.7" smashed="yes" rot="R90">
+<attribute name="NAME" x="230.124" y="134.112" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="235.712" y="145.415" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R5" gate="G$1" x="218.44" y="129.54" smashed="yes" rot="R90">
-<attribute name="NAME" x="216.9414" y="125.73" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="221.742" y="125.73" size="1.778" layer="96" rot="R90"/>
+<instance part="NOFUNCTION-RED" gate="G$1" x="251.46" y="142.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="245.364" y="134.112" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="256.032" y="147.955" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="WARNING-ORNG" gate="G$1" x="210.82" y="139.7" smashed="yes" rot="R90">
-<attribute name="NAME" x="209.804" y="134.112" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="215.392" y="145.415" size="1.778" layer="96" rot="R180"/>
+<instance part="FUNCTION-GRN" gate="G$1" x="251.46" y="167.64" smashed="yes" rot="R90">
+<attribute name="NAME" x="249.428" y="174.244" size="1.778" layer="95"/>
+<attribute name="VALUE" x="256.032" y="173.355" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="NOFUNCTION-RED" gate="G$1" x="231.14" y="142.24" smashed="yes" rot="R90">
-<attribute name="NAME" x="225.044" y="134.112" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="235.712" y="147.955" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="FUNCTION-GRN" gate="G$1" x="231.14" y="167.64" smashed="yes" rot="R90">
-<attribute name="NAME" x="229.108" y="174.244" size="1.778" layer="95"/>
+<instance part="POWER-BLU" gate="G$1" x="231.14" y="167.64" smashed="yes" rot="R90">
+<attribute name="NAME" x="224.028" y="174.244" size="1.778" layer="95"/>
 <attribute name="VALUE" x="235.712" y="173.355" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="POWER-BLU" gate="G$1" x="210.82" y="167.64" smashed="yes" rot="R90">
-<attribute name="NAME" x="203.708" y="174.244" size="1.778" layer="95"/>
-<attribute name="VALUE" x="215.392" y="173.355" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="R6" gate="G$1" x="218.44" y="157.48" smashed="yes" rot="R90">
-<attribute name="NAME" x="216.9414" y="153.67" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="222.25" y="155.702" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="R7" gate="G$1" x="238.76" y="157.48" smashed="yes" rot="R90">
+<instance part="R6" gate="G$1" x="238.76" y="157.48" smashed="yes" rot="R90">
 <attribute name="NAME" x="237.2614" y="153.67" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="242.062" y="153.67" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="242.57" y="155.702" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND1" gate="1" x="238.76" y="147.32" smashed="yes">
+<instance part="R7" gate="G$1" x="259.08" y="157.48" smashed="yes" rot="R90">
+<attribute name="NAME" x="257.5814" y="153.67" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="262.382" y="153.67" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="GND1" gate="1" x="259.08" y="147.32" smashed="yes">
+<attribute name="VALUE" x="256.54" y="144.78" size="1.778" layer="96"/>
+</instance>
+<instance part="GND2" gate="1" x="238.76" y="147.32" smashed="yes">
 <attribute name="VALUE" x="236.22" y="144.78" size="1.778" layer="96"/>
 </instance>
-<instance part="GND2" gate="1" x="218.44" y="147.32" smashed="yes">
-<attribute name="VALUE" x="215.9" y="144.78" size="1.778" layer="96"/>
-</instance>
-<instance part="GND3" gate="1" x="218.44" y="119.38" smashed="yes">
-<attribute name="VALUE" x="215.9" y="116.84" size="1.778" layer="96"/>
-</instance>
-<instance part="GND4" gate="1" x="238.76" y="119.38" smashed="yes">
+<instance part="GND3" gate="1" x="238.76" y="119.38" smashed="yes">
 <attribute name="VALUE" x="236.22" y="116.84" size="1.778" layer="96"/>
+</instance>
+<instance part="GND4" gate="1" x="259.08" y="119.38" smashed="yes">
+<attribute name="VALUE" x="256.54" y="116.84" size="1.778" layer="96"/>
 </instance>
 <instance part="JP1" gate="A" x="93.98" y="165.1" smashed="yes">
 <attribute name="NAME" x="87.63" y="170.815" size="1.778" layer="95"/>
@@ -11943,16 +11990,16 @@ Voice Recognition Processor</text>
 <instance part="GND5" gate="1" x="142.24" y="154.94" smashed="yes">
 <attribute name="VALUE" x="139.7" y="152.4" size="1.778" layer="96"/>
 </instance>
-<instance part="SJ1" gate="1" x="236.22" y="27.94" smashed="yes" rot="R90">
-<attribute name="NAME" x="233.68" y="25.4" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="240.03" y="25.4" size="1.778" layer="96" rot="R90"/>
+<instance part="SJ1" gate="1" x="223.52" y="27.94" smashed="yes" rot="R90">
+<attribute name="NAME" x="220.98" y="25.4" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="227.33" y="25.4" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND6" gate="1" x="236.22" y="15.24" smashed="yes">
-<attribute name="VALUE" x="233.68" y="12.7" size="1.778" layer="96"/>
+<instance part="GND6" gate="1" x="223.52" y="15.24" smashed="yes">
+<attribute name="VALUE" x="220.98" y="12.7" size="1.778" layer="96"/>
 </instance>
-<instance part="Q1" gate="G$1" x="137.16" y="81.28" smashed="yes" rot="R90">
-<attribute name="NAME" x="136.144" y="83.82" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="139.7" y="83.82" size="1.778" layer="96" rot="R90"/>
+<instance part="Q1" gate="G$1" x="129.54" y="81.28" smashed="yes" rot="R90">
+<attribute name="NAME" x="128.524" y="83.82" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="132.08" y="83.82" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="C1" gate="G$1" x="116.84" y="86.36" smashed="yes" rot="R90">
 <attribute name="NAME" x="116.205" y="87.376" size="1.778" layer="95" rot="R90"/>
@@ -12006,8 +12053,8 @@ Voice Recognition Processor</text>
 <instance part="P+9" gate="VCC" x="165.1" y="177.8" smashed="yes">
 <attribute name="VALUE" x="162.56" y="175.26" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="P+10" gate="VCC" x="200.66" y="170.18" smashed="yes">
-<attribute name="VALUE" x="198.12" y="167.64" size="1.778" layer="96" rot="R90"/>
+<instance part="P+10" gate="VCC" x="220.98" y="170.18" smashed="yes">
+<attribute name="VALUE" x="218.44" y="167.64" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="P+11" gate="VCC" x="106.68" y="142.24" smashed="yes">
 <attribute name="VALUE" x="104.14" y="139.7" size="1.778" layer="96" rot="R90"/>
@@ -12015,14 +12062,24 @@ Voice Recognition Processor</text>
 <instance part="P+12" gate="VCC" x="149.86" y="121.92" smashed="yes">
 <attribute name="VALUE" x="147.32" y="119.38" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="P+13" gate="VCC" x="236.22" y="63.5" smashed="yes">
-<attribute name="VALUE" x="233.68" y="60.96" size="1.778" layer="96" rot="R90"/>
+<instance part="P+13" gate="VCC" x="223.52" y="63.5" smashed="yes">
+<attribute name="VALUE" x="220.98" y="60.96" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="P+14" gate="VCC" x="109.22" y="48.26" smashed="yes">
 <attribute name="VALUE" x="106.68" y="45.72" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND13" gate="1" x="152.4" y="30.48" smashed="yes">
 <attribute name="VALUE" x="149.86" y="27.94" size="1.778" layer="96"/>
+</instance>
+<instance part="JP3" gate="A" x="254" y="58.42" smashed="yes" rot="R270">
+<attribute name="NAME" x="259.715" y="64.77" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="246.38" y="64.77" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="P+1" gate="VCC" x="256.54" y="71.12" smashed="yes">
+<attribute name="VALUE" x="254" y="68.58" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND14" gate="1" x="251.46" y="50.8" smashed="yes">
+<attribute name="VALUE" x="248.92" y="48.26" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -12032,30 +12089,30 @@ Voice Recognition Processor</text>
 <segment>
 <pinref part="POWER-BLU" gate="G$1" pin="C"/>
 <pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="215.9" y1="167.64" x2="218.44" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="167.64" x2="218.44" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="167.64" x2="238.76" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="167.64" x2="238.76" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="218.44" y1="152.4" x2="218.44" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="152.4" x2="238.76" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="238.76" y1="152.4" x2="238.76" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="152.4" x2="259.08" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="218.44" y1="124.46" x2="218.44" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="124.46" x2="238.76" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="238.76" y1="124.46" x2="238.76" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="124.46" x2="259.08" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="RESET" gate="G$1" pin="P$2"/>
@@ -12065,7 +12122,7 @@ Voice Recognition Processor</text>
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
 <pinref part="SJ1" gate="1" pin="1"/>
-<wire x1="236.22" y1="17.78" x2="236.22" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="17.78" x2="223.52" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
@@ -12132,50 +12189,55 @@ Voice Recognition Processor</text>
 <wire x1="157.48" y1="35.56" x2="152.4" y2="35.56" width="0.1524" layer="91"/>
 <junction x="152.4" y="35.56"/>
 </segment>
+<segment>
+<pinref part="GND14" gate="1" pin="GND"/>
+<pinref part="JP3" gate="A" pin="3"/>
+<wire x1="251.46" y1="53.34" x2="251.46" y2="60.96" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="FUNCTION-GRN" gate="G$1" pin="C"/>
 <pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="236.22" y1="167.64" x2="238.76" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="167.64" x2="238.76" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="167.64" x2="259.08" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="167.64" x2="259.08" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="WARNING-ORNG" gate="G$1" pin="C"/>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="215.9" y1="139.7" x2="218.44" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="139.7" x2="218.44" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="139.7" x2="238.76" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="139.7" x2="238.76" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="NOFUNCTION-RED" gate="G$1" pin="C"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="236.22" y1="142.24" x2="238.76" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="142.24" x2="238.76" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="142.24" x2="259.08" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="142.24" x2="259.08" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FUNC" class="0">
 <segment>
 <pinref part="FUNCTION-GRN" gate="G$1" pin="A"/>
-<wire x1="228.6" y1="167.64" x2="226.06" y2="167.64" width="0.1524" layer="91"/>
-<label x="223.52" y="167.64" size="1.778" layer="95"/>
+<wire x1="248.92" y1="167.64" x2="246.38" y2="167.64" width="0.1524" layer="91"/>
+<label x="243.84" y="167.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="NOFUNC" class="0">
 <segment>
 <pinref part="NOFUNCTION-RED" gate="G$1" pin="A"/>
-<wire x1="228.6" y1="142.24" x2="223.52" y2="142.24" width="0.1524" layer="91"/>
-<label x="218.44" y="142.24" size="1.778" layer="95"/>
+<wire x1="248.92" y1="142.24" x2="243.84" y2="142.24" width="0.1524" layer="91"/>
+<label x="238.76" y="142.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="WARN" class="0">
 <segment>
 <pinref part="WARNING-ORNG" gate="G$1" pin="A"/>
-<wire x1="208.28" y1="139.7" x2="205.74" y2="139.7" width="0.1524" layer="91"/>
-<label x="203.2" y="139.7" size="1.778" layer="95"/>
+<wire x1="228.6" y1="139.7" x2="226.06" y2="139.7" width="0.1524" layer="91"/>
+<label x="223.52" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RST" class="0">
@@ -12213,11 +12275,14 @@ Voice Recognition Processor</text>
 <segment>
 <pinref part="SJ1" gate="1" pin="2"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="236.22" y1="33.02" x2="236.22" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="38.1" x2="236.22" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="38.1" x2="228.6" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="38.1" x2="228.6" y2="60.96" width="0.1524" layer="91"/>
-<junction x="236.22" y="38.1"/>
+<wire x1="223.52" y1="33.02" x2="223.52" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="38.1" x2="223.52" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="38.1" x2="228.6" y2="38.1" width="0.1524" layer="91"/>
+<junction x="223.52" y="38.1"/>
+<wire x1="228.6" y1="38.1" x2="228.6" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="86.36" x2="223.52" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="PE2(!HWB)"/>
+<wire x1="223.52" y1="91.44" x2="205.74" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -12225,9 +12290,9 @@ Voice Recognition Processor</text>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="121.92" y1="86.36" x2="129.54" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="2"/>
-<wire x1="129.54" y1="86.36" x2="137.16" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="83.82" x2="147.32" y2="76.2" width="0.1524" layer="91"/>
-<junction x="137.16" y="83.82"/>
+<wire x1="129.54" y1="86.36" x2="129.54" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="83.82" x2="147.32" y2="76.2" width="0.1524" layer="91"/>
+<junction x="129.54" y="83.82"/>
 <wire x1="147.32" y1="76.2" x2="147.32" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="XTAL1"/>
 <wire x1="147.32" y1="63.5" x2="157.48" y2="63.5" width="0.1524" layer="91"/>
@@ -12236,10 +12301,10 @@ Voice Recognition Processor</text>
 <net name="N$12" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="78.74" x2="137.16" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="78.74" x2="129.54" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="137.16" y1="78.74" x2="144.78" y2="73.66" width="0.1524" layer="91"/>
-<junction x="137.16" y="78.74"/>
+<wire x1="129.54" y1="78.74" x2="144.78" y2="73.66" width="0.1524" layer="91"/>
+<junction x="129.54" y="78.74"/>
 <wire x1="144.78" y1="73.66" x2="144.78" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="XTAL2"/>
 <wire x1="144.78" y1="55.88" x2="157.48" y2="55.88" width="0.1524" layer="91"/>
@@ -12335,7 +12400,7 @@ Voice Recognition Processor</text>
 </segment>
 <segment>
 <pinref part="POWER-BLU" gate="G$1" pin="A"/>
-<wire x1="200.66" y1="167.64" x2="208.28" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="167.64" x2="228.6" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="P+10" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
@@ -12377,8 +12442,13 @@ Voice Recognition Processor</text>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="236.22" y1="60.96" x2="236.22" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="60.96" x2="223.52" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="P+13" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
+<pinref part="JP3" gate="A" pin="1"/>
+<wire x1="256.54" y1="68.58" x2="256.54" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -12388,6 +12458,13 @@ Voice Recognition Processor</text>
 <wire x1="154.94" y1="76.2" x2="127" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="127" y1="76.2" x2="127" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SIGNAL" class="0">
+<segment>
+<pinref part="JP3" gate="A" pin="2"/>
+<wire x1="254" y1="60.96" x2="254" y2="81.28" width="0.1524" layer="91"/>
+<label x="254" y="81.28" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
