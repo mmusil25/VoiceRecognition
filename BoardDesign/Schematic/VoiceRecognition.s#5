@@ -13705,8 +13705,8 @@ Microprocessor</text>
 <wire x1="66.04" y1="144.78" x2="66.04" y2="180.34" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="66.04" y1="180.34" x2="10.16" y2="180.34" width="0.1524" layer="97" style="shortdash"/>
 <text x="30.48" y="182.88" size="1.778" layer="97">Tactile Inputs</text>
-<text x="226.06" y="172.72" size="1.778" layer="97">PWR-BLU</text>
-<text x="218.44" y="144.78" size="1.778" layer="97">WARN-YELL</text>
+<text x="228.6" y="172.72" size="1.778" layer="97">PWR_BLU</text>
+<text x="215.9" y="142.24" size="1.778" layer="97">WARN_YELL</text>
 <wire x1="71.12" y1="78.74" x2="71.12" y2="114.3" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="71.12" y1="114.3" x2="53.34" y2="114.3" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="53.34" y1="114.3" x2="53.34" y2="137.16" width="0.1524" layer="97" style="shortdash"/>
@@ -13989,11 +13989,11 @@ Microprocessor</text>
 <attribute name="TP_SIGNAL_NAME" x="224.79" y="171.45" size="1.778" layer="97"/>
 </instance>
 <instance part="TP18" gate="G$1" x="248.92" y="170.18" smashed="yes">
-<attribute name="NAME" x="247.65" y="171.45" size="1.778" layer="95"/>
+<attribute name="NAME" x="247.65" y="173.99" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="250.19" y="168.91" size="1.778" layer="97"/>
 </instance>
 <instance part="TP19" gate="G$1" x="228.6" y="142.24" smashed="yes">
-<attribute name="NAME" x="227.33" y="143.51" size="1.778" layer="95"/>
+<attribute name="NAME" x="212.09" y="146.05" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="229.87" y="140.97" size="1.778" layer="97"/>
 </instance>
 <instance part="TP20" gate="G$1" x="248.92" y="142.24" smashed="yes">
@@ -14172,19 +14172,19 @@ Microprocessor</text>
 <pinref part="LED3" gate="G$1" pin="C"/>
 </segment>
 </net>
-<net name="FUNC-GRN" class="0">
+<net name="FUNC_GRN" class="0">
 <segment>
 <wire x1="248.92" y1="167.64" x2="246.38" y2="167.64" width="0.1524" layer="91"/>
-<label x="246.38" y="170.18" size="1.778" layer="95"/>
+<label x="254" y="170.18" size="1.778" layer="95"/>
 <pinref part="LED2" gate="G$1" pin="A"/>
 <pinref part="TP18" gate="G$1" pin="TP"/>
 <junction x="248.92" y="167.64"/>
 </segment>
 </net>
-<net name="NOFUNC-RED" class="0">
+<net name="NOFUNC_RED" class="0">
 <segment>
 <wire x1="248.92" y1="139.7" x2="243.84" y2="139.7" width="0.1524" layer="91"/>
-<label x="243.84" y="142.24" size="1.778" layer="95"/>
+<label x="241.3" y="134.62" size="1.778" layer="95"/>
 <pinref part="LED3" gate="G$1" pin="A"/>
 <pinref part="TP20" gate="G$1" pin="TP"/>
 <junction x="248.92" y="139.7"/>

@@ -13952,9 +13952,9 @@ Microprocessor</text>
 <attribute name="NAME" x="74.93" y="171.45" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="77.47" y="168.91" size="1.778" layer="97"/>
 </instance>
-<instance part="SCK" gate="G$1" x="81.28" y="167.64" smashed="yes">
-<attribute name="NAME" x="80.01" y="168.91" size="1.778" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="82.55" y="166.37" size="1.778" layer="97"/>
+<instance part="SCK" gate="G$1" x="78.74" y="160.02" smashed="yes">
+<attribute name="NAME" x="77.47" y="161.29" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="80.01" y="158.75" size="1.778" layer="97"/>
 </instance>
 <instance part="MISO" gate="G$1" x="116.84" y="167.64" smashed="yes">
 <attribute name="NAME" x="115.57" y="168.91" size="1.778" layer="95"/>
@@ -13964,9 +13964,9 @@ Microprocessor</text>
 <attribute name="NAME" x="105.41" y="171.45" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="107.95" y="168.91" size="1.778" layer="97"/>
 </instance>
-<instance part="GND_ICSP" gate="G$1" x="106.68" y="165.1" smashed="yes">
-<attribute name="NAME" x="105.41" y="166.37" size="1.778" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="107.95" y="163.83" size="1.778" layer="97"/>
+<instance part="GND_ICSP" gate="G$1" x="111.76" y="162.56" smashed="yes" rot="R270">
+<attribute name="NAME" x="113.03" y="166.37" size="1.778" layer="95" rot="R270"/>
+<attribute name="TP_SIGNAL_NAME" x="110.49" y="161.29" size="1.778" layer="97" rot="R270"/>
 </instance>
 <instance part="PWR_BLU" gate="G$1" x="223.52" y="172.72" smashed="yes">
 <attribute name="NAME" x="222.25" y="173.99" size="1.778" layer="95"/>
@@ -14070,12 +14070,11 @@ Microprocessor</text>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="6"/>
-<wire x1="99.06" y1="162.56" x2="106.68" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="162.56" x2="109.22" y2="162.56" width="0.1524" layer="91"/>
 <pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="106.68" y1="162.56" x2="109.22" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="162.56" x2="109.22" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="GND_ICSP" gate="G$1" pin="TP"/>
-<junction x="106.68" y="162.56"/>
+<junction x="109.22" y="162.56"/>
 </segment>
 <segment>
 <pinref part="GND12" gate="1" pin="GND"/>
@@ -14305,6 +14304,7 @@ Microprocessor</text>
 <wire x1="142.24" y1="104.14" x2="142.24" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="111.76" x2="149.86" y2="111.76" width="0.1524" layer="91"/>
 <junction x="149.86" y="111.76"/>
+<junction x="152.4" y="93.98"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -14492,9 +14492,8 @@ Microprocessor</text>
 <net name="N$2" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="3"/>
-<wire x1="78.74" y1="165.1" x2="81.28" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="165.1" x2="91.44" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="165.1" x2="78.74" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="157.48" x2="91.44" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="157.48" x2="78.74" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="152.4" x2="121.92" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="152.4" x2="121.92" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="124.46" x2="215.9" y2="124.46" width="0.1524" layer="91"/>
@@ -14502,7 +14501,7 @@ Microprocessor</text>
 <wire x1="215.9" y1="124.46" x2="215.9" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="60.96" x2="205.74" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="SCK" gate="G$1" pin="TP"/>
-<junction x="81.28" y="165.1"/>
+<junction x="78.74" y="157.48"/>
 </segment>
 </net>
 <net name="MIC_SIGNAL" class="0">
@@ -14551,6 +14550,20 @@ Microprocessor</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,33.02,109.22,X1,VBUS,VCC,,,"/>
+<approved hash="113,1,138.534,95.146,FRAME1,,,,,"/>
+<approved hash="113,1,95.2077,166.596,JP1,,,,,"/>
+<approved hash="113,1,221.91,27.94,SJ1,,,,,"/>
+<approved hash="113,1,37.0561,40.4029,JP2,,,,,"/>
+<approved hash="113,1,255.496,60.7229,JP3,,,,,"/>
+<approved hash="113,1,48.26,169.393,RESET1,,,,,"/>
+<approved hash="113,1,229.87,169.367,PWR-BLU,,,,,"/>
+<approved hash="113,1,252.73,166.827,LED2,,,,,"/>
+<approved hash="113,1,252.73,138.887,LED3,,,,,"/>
+<approved hash="113,1,232.41,138.887,LED4,,,,,"/>
+<approved hash="113,1,33.02,52.5526,MIC_ON,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>

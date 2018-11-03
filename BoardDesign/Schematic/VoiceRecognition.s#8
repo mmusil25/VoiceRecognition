@@ -12775,7 +12775,7 @@ Microprocessor</text>
 <attribute name="VALUE" x="149.86" y="177.8" size="1.778" layer="96"/>
 </instance>
 <instance part="P+10" gate="VCC" x="218.44" y="175.26" smashed="yes">
-<attribute name="VALUE" x="218.44" y="177.8" size="1.778" layer="96"/>
+<attribute name="VALUE" x="215.9" y="175.26" size="1.778" layer="96"/>
 </instance>
 <instance part="P+11" gate="VCC" x="40.64" y="134.62" smashed="yes">
 <attribute name="VALUE" x="38.1" y="132.08" size="1.778" layer="96" rot="R180"/>
@@ -13126,11 +13126,6 @@ Microprocessor</text>
 <pinref part="P+13" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="PWR-BLU" gate="G$1" pin="A"/>
-<pinref part="P+10" gate="VCC" pin="VCC"/>
-<wire x1="226.06" y1="170.18" x2="218.44" y2="172.72" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="R8" gate="G$1" pin="2"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 </segment>
@@ -13139,6 +13134,12 @@ Microprocessor</text>
 <wire x1="33.02" y1="109.22" x2="40.64" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="109.22" x2="40.64" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="P+11" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="P+10" gate="VCC" pin="VCC"/>
+<wire x1="218.44" y1="172.72" x2="218.44" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="PWR-BLU" gate="G$1" pin="A"/>
+<wire x1="218.44" y1="170.18" x2="226.06" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SIGNAL" class="0">

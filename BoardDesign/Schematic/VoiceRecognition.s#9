@@ -12599,9 +12599,9 @@ Voice Recognition Processor</text>
 <wire x1="271.78" y1="177.8" x2="271.78" y2="106.68" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="271.78" y1="106.68" x2="261.62" y2="106.68" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="261.62" y1="106.68" x2="256.54" y2="101.6" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="256.54" y1="101.6" x2="233.68" y2="101.6" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="233.68" y1="101.6" x2="210.82" y2="124.46" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="210.82" y1="124.46" x2="210.82" y2="175.26" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="256.54" y1="101.6" x2="233.68" y2="104.14" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="233.68" y1="104.14" x2="210.82" y2="127" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="210.82" y1="127" x2="210.82" y2="175.26" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="210.82" y1="175.26" x2="215.9" y2="180.34" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="243.84" y1="86.36" x2="269.24" y2="86.36" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="269.24" y1="86.36" x2="269.24" y2="43.18" width="0.1524" layer="97" style="shortdash"/>
@@ -12683,9 +12683,9 @@ Microprocessor</text>
 <attribute name="NAME" x="257.5814" y="123.19" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="262.382" y="123.19" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R4" gate="G$1" x="223.52" y="48.26" smashed="yes" rot="R90">
-<attribute name="NAME" x="222.0214" y="44.45" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="226.822" y="44.45" size="1.778" layer="96" rot="R90"/>
+<instance part="R4" gate="G$1" x="223.52" y="43.18" smashed="yes" rot="R90">
+<attribute name="NAME" x="222.0214" y="39.37" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="226.822" y="39.37" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R5" gate="G$1" x="238.76" y="129.54" smashed="yes" rot="R90">
 <attribute name="NAME" x="237.2614" y="125.73" size="1.778" layer="95" rot="R90"/>
@@ -12783,8 +12783,8 @@ Microprocessor</text>
 <instance part="P+12" gate="VCC" x="149.86" y="121.92" smashed="yes">
 <attribute name="VALUE" x="147.32" y="119.38" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="P+13" gate="VCC" x="223.52" y="63.5" smashed="yes">
-<attribute name="VALUE" x="220.98" y="66.04" size="1.778" layer="96"/>
+<instance part="P+13" gate="VCC" x="223.52" y="55.88" smashed="yes">
+<attribute name="VALUE" x="220.98" y="58.42" size="1.778" layer="96"/>
 </instance>
 <instance part="P+14" gate="VCC" x="35.56" y="55.88" smashed="yes">
 <attribute name="VALUE" x="33.02" y="53.34" size="1.778" layer="96" rot="R90"/>
@@ -13045,13 +13045,11 @@ Microprocessor</text>
 <pinref part="SJ1" gate="1" pin="2"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="223.52" y1="33.02" x2="223.52" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="38.1" x2="223.52" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="38.1" x2="228.6" y2="38.1" width="0.1524" layer="91"/>
 <junction x="223.52" y="38.1"/>
-<wire x1="228.6" y1="38.1" x2="228.6" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="86.36" x2="223.52" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="38.1" x2="228.6" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="PE2(!HWB)"/>
-<wire x1="223.52" y1="91.44" x2="205.74" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="91.44" x2="205.74" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -13061,24 +13059,10 @@ Microprocessor</text>
 <wire x1="73.66" y1="167.64" x2="73.66" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="147.32" x2="119.38" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="147.32" x2="119.38" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="134.62" x2="190.5" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="190.5" y1="134.62" x2="223.52" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="101.6" x2="223.52" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="68.58" x2="210.82" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="134.62" x2="226.06" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="PB2(PDI/MOSI)"/>
-<wire x1="210.82" y1="68.58" x2="205.74" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<wire x1="144.78" y1="40.64" x2="144.78" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="15.24" x2="213.36" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="1"/>
-<wire x1="38.1" y1="40.64" x2="144.78" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="15.24" x2="213.36" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="106.68" x2="210.82" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="PF0(ADC0)"/>
-<wire x1="210.82" y1="109.22" x2="205.74" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="63.5" x2="205.74" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="134.62" x2="226.06" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -13138,7 +13122,7 @@ Microprocessor</text>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="223.52" y1="60.96" x2="223.52" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="53.34" x2="223.52" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="P+13" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
@@ -13166,15 +13150,13 @@ Microprocessor</text>
 </net>
 <net name="N$17" class="0">
 <segment>
+<wire x1="220.98" y1="132.08" x2="124.46" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="132.08" x2="124.46" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="PB3(PDO/MISO)"/>
-<wire x1="205.74" y1="66.04" x2="220.98" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="81.28" x2="220.98" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="109.22" x2="193.04" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="137.16" x2="127" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="127" y1="137.16" x2="124.46" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="139.7" x2="124.46" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="132.08" x2="220.98" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="66.04" x2="205.74" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="4"/>
-<wire x1="124.46" y1="165.1" x2="99.06" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="165.1" x2="124.46" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -13306,6 +13288,17 @@ Microprocessor</text>
 <pinref part="U$1" gate="G$1" pin="PB1(SCK)"/>
 <wire x1="215.9" y1="124.46" x2="215.9" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="60.96" x2="205.74" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PF0(ADC0)"/>
+<wire x1="213.36" y1="109.22" x2="205.74" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="40.64" x2="144.78" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="15.24" x2="213.36" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="1"/>
+<wire x1="38.1" y1="40.64" x2="144.78" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="15.24" x2="213.36" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -13593,8 +13593,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="RESET1" library="adafruit" deviceset="SWITCH_PUSHBUTTON" device="C&amp;K_KSS"/>
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="MIC_ON" library="adafruit" deviceset="SWITCH_PUSHBUTTON" device="C&amp;K_KSS"/>
-<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="PWR-BLU" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="SMT1206" package3d_urn="urn:adsk.eagle:package:15796/2"/>
 <part name="LED2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="SMT1206" package3d_urn="urn:adsk.eagle:package:15796/2"/>
 <part name="LED3" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="SMT1206" package3d_urn="urn:adsk.eagle:package:15796/2"/>
@@ -13611,7 +13609,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="D+" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="D-" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
-<part name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="TP4" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="SERVO_SIGNAL" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="VCC" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
@@ -13629,7 +13626,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="WARN_YELL" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="NOFUNC_RED" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="!HWB" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
-<part name="MIC_ON1" library="adafruit" deviceset="SWITCH_PUSHBUTTON" device="C&amp;K_KSS"/>
+<part name="MIC_ON" library="adafruit" deviceset="SWITCH_PUSHBUTTON" device="C&amp;K_KSS"/>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="10uF"/>
 <part name="RESET" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="VCC_TO_MIC" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
@@ -13700,14 +13697,13 @@ provide power</text>
 <wire x1="88.9" y1="73.66" x2="88.9" y2="101.6" width="0.1524" layer="97" style="shortdash"/>
 <text x="96.52" y="68.58" size="1.778" layer="97">Crystal Oscillator
 16MHz</text>
-<text x="15.24" y="175.26" size="1.778" layer="97">Microphone On</text>
 <text x="45.72" y="154.94" size="1.778" layer="97">RESET 
 Microprocessor</text>
-<wire x1="10.16" y1="180.34" x2="10.16" y2="144.78" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="10.16" y1="144.78" x2="66.04" y2="144.78" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="33.02" y1="180.34" x2="33.02" y2="144.78" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="33.02" y1="144.78" x2="66.04" y2="144.78" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="66.04" y1="144.78" x2="66.04" y2="180.34" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="66.04" y1="180.34" x2="10.16" y2="180.34" width="0.1524" layer="97" style="shortdash"/>
-<text x="30.48" y="182.88" size="1.778" layer="97">Tactile Inputs</text>
+<wire x1="66.04" y1="180.34" x2="33.02" y2="180.34" width="0.1524" layer="97" style="shortdash"/>
+<text x="43.18" y="182.88" size="1.778" layer="97">Reset Button</text>
 <text x="228.6" y="172.72" size="1.778" layer="97">PWR_BLU</text>
 <text x="215.9" y="142.24" size="1.778" layer="97">WARN_YELL</text>
 <wire x1="71.12" y1="78.74" x2="71.12" y2="114.3" width="0.1524" layer="97" style="shortdash"/>
@@ -13869,13 +13865,6 @@ Microprocessor</text>
 <instance part="GND18" gate="1" x="43.18" y="152.4" smashed="yes">
 <attribute name="VALUE" x="40.64" y="149.86" size="1.778" layer="96"/>
 </instance>
-<instance part="MIC_ON" gate="G$1" x="22.86" y="167.64" smashed="yes">
-<attribute name="NAME" x="20.32" y="171.196" size="1.27" layer="95"/>
-<attribute name="VALUE" x="20.32" y="165.354" size="1.27" layer="96"/>
-</instance>
-<instance part="GND5" gate="1" x="17.78" y="152.4" smashed="yes">
-<attribute name="VALUE" x="15.24" y="149.86" size="1.778" layer="96"/>
-</instance>
 <instance part="PWR-BLU" gate="G$1" x="228.6" y="170.18" smashed="yes" rot="R90">
 <attribute name="VALUE" x="233.172" y="175.895" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -13930,10 +13919,6 @@ Microprocessor</text>
 <instance part="D-" gate="G$1" x="76.2" y="86.36" smashed="yes">
 <attribute name="NAME" x="74.93" y="87.63" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="77.47" y="85.09" size="1.778" layer="97"/>
-</instance>
-<instance part="TP3" gate="G$1" x="33.02" y="170.18" smashed="yes">
-<attribute name="NAME" x="31.75" y="171.45" size="1.778" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="34.29" y="168.91" size="1.778" layer="97"/>
 </instance>
 <instance part="TP4" gate="G$1" x="55.88" y="165.1" smashed="yes">
 <attribute name="NAME" x="54.61" y="166.37" size="1.778" layer="95"/>
@@ -14003,8 +13988,8 @@ Microprocessor</text>
 <attribute name="NAME" x="227.33" y="95.25" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="229.87" y="92.71" size="1.778" layer="97"/>
 </instance>
-<instance part="MIC_ON1" gate="G$1" x="33.02" y="50.8" smashed="yes">
-<attribute name="NAME" x="30.48" y="54.356" size="1.27" layer="95"/>
+<instance part="MIC_ON" gate="G$1" x="33.02" y="50.8" smashed="yes">
+<attribute name="NAME" x="27.94" y="54.356" size="1.27" layer="95"/>
 <attribute name="VALUE" x="30.48" y="48.514" size="1.27" layer="96"/>
 </instance>
 <instance part="C7" gate="G$1" x="45.72" y="50.8" smashed="yes" rot="R90">
@@ -14131,11 +14116,6 @@ Microprocessor</text>
 <pinref part="GND18" gate="1" pin="GND"/>
 <pinref part="RESET1" gate="G$1" pin="P$1"/>
 <wire x1="43.18" y1="154.94" x2="43.18" y2="167.64" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND5" gate="1" pin="GND"/>
-<pinref part="MIC_ON" gate="G$1" pin="P$1"/>
-<wire x1="17.78" y1="154.94" x2="17.78" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C8" gate="G$1" pin="2"/>
@@ -14357,7 +14337,7 @@ Microprocessor</text>
 <pinref part="C6" gate="G$1" pin="1"/>
 <pinref part="P+14" gate="VCC" pin="VCC"/>
 <wire x1="17.78" y1="48.26" x2="17.78" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="MIC_ON1" gate="G$1" pin="P$1"/>
+<pinref part="MIC_ON" gate="G$1" pin="P$1"/>
 <wire x1="17.78" y1="50.8" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="50.8" x2="27.94" y2="50.8" width="0.1524" layer="91"/>
 <junction x="17.78" y="50.8"/>
@@ -14429,15 +14409,6 @@ Microprocessor</text>
 <wire x1="152.4" y1="71.12" x2="116.84" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="116.84" y1="71.12" x2="116.84" y2="66.04" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="MIC_ON" gate="G$1" pin="P$2"/>
-<wire x1="27.94" y1="167.64" x2="33.02" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="167.64" x2="33.02" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="TP3" gate="G$1" pin="TP"/>
-<junction x="33.02" y="167.64"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -14566,7 +14537,7 @@ Microprocessor</text>
 <segment>
 <pinref part="JP2" gate="A" pin="2"/>
 <wire x1="35.56" y1="48.26" x2="35.56" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="MIC_ON1" gate="G$1" pin="P$2"/>
+<pinref part="MIC_ON" gate="G$1" pin="P$2"/>
 <wire x1="38.1" y1="50.8" x2="38.1" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="48.26" x2="35.56" y2="48.26" width="0.1524" layer="91"/>
 <junction x="38.1" y="55.88"/>

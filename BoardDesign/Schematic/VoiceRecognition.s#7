@@ -12571,6 +12571,8 @@ The Slot footprint only works if the mill layer is transmitted to the PCB fab ho
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="POWER_JACK" device="SMD" package3d_urn="urn:adsk.eagle:package:38221/1" value="5.5x2.1mm Barrel"/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="100nF"/>
+<part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12853,6 +12855,13 @@ Microprocessor</text>
 <instance part="GND20" gate="1" x="182.88" y="154.94" smashed="yes">
 <attribute name="VALUE" x="180.34" y="152.4" size="1.778" layer="96"/>
 </instance>
+<instance part="C6" gate="G$1" x="45.72" y="53.34" smashed="yes" rot="R90">
+<attribute name="NAME" x="45.085" y="54.356" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="49.911" y="54.356" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND15" gate="1" x="50.8" y="45.72" smashed="yes">
+<attribute name="VALUE" x="48.26" y="43.18" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -12982,6 +12991,11 @@ Microprocessor</text>
 <junction x="187.96" y="162.56"/>
 <wire x1="182.88" y1="162.56" x2="182.88" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="GND20" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="2"/>
+<wire x1="50.8" y1="53.34" x2="50.8" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="GND15" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -13119,6 +13133,9 @@ Microprocessor</text>
 <pinref part="JP2" gate="A" pin="2"/>
 <wire x1="35.56" y1="53.34" x2="35.56" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="P+14" gate="VCC" pin="VCC"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="35.56" y1="53.34" x2="43.18" y2="53.34" width="0.1524" layer="91"/>
+<junction x="35.56" y="53.34"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
