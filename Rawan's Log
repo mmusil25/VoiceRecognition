@@ -1,8 +1,0 @@
-Box Design Plan:
-
-11/1/2018
-1. Bought box that the system will sit in and eventually be able to unlock it.
-2. This box has a latch style system already built in, the plan is to take that part off.
-3. Instead of a typical lock and unlock style, I will attempt to let the servo open the lid itself. This is going to happen when a wire is attatched to the inside of the lid and the servo will just push it up.
-4. Tonight I will attempt to just atatch the wire and make sure that this will work.
-5. Easy back up plan: just have the servo motor unlock and lock a simple lock mechanism that I will purchase as backup if todays plan doesnt work.
