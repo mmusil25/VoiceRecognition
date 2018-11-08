@@ -12104,6 +12104,7 @@ Microprocessor</text>
 <wire x1="274.32" y1="185.42" x2="274.32" y2="142.24" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="274.32" y1="142.24" x2="208.28" y2="142.24" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="208.28" y1="142.24" x2="208.28" y2="185.42" width="0.1524" layer="97" style="shortdash"/>
+<text x="35.56" y="177.8" size="1.778" layer="97">NC</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="276.86" y="2.54" smashed="yes" rot="R90">
