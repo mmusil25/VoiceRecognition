@@ -12033,6 +12033,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12418,6 +12419,9 @@ Microprocessor</text>
 <instance part="GND21" gate="1" x="127" y="86.36" smashed="yes" rot="R270">
 <attribute name="VALUE" x="124.46" y="88.9" size="1.778" layer="96" rot="R270"/>
 </instance>
+<instance part="GND22" gate="1" x="33.02" y="88.9" smashed="yes">
+<attribute name="VALUE" x="30.48" y="86.36" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 <bus name="MISO,MOSI,RST,SCK">
@@ -12578,6 +12582,14 @@ Microprocessor</text>
 <segment>
 <pinref part="C11" gate="G$1" pin="2"/>
 <pinref part="GND21" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="GND"/>
+<wire x1="33.02" y1="101.6" x2="33.02" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="USB_TO_GND" gate="G$1" pin="TP"/>
+<pinref part="GND22" gate="1" pin="GND"/>
+<wire x1="33.02" y1="91.44" x2="33.02" y2="93.98" width="0.1524" layer="91"/>
+<junction x="33.02" y="93.98"/>
 </segment>
 </net>
 <net name="FUNC_GRN" class="0">
@@ -13003,13 +13015,6 @@ Microprocessor</text>
 <wire x1="220.98" y1="66.04" x2="205.74" y2="66.04" width="0.1524" layer="91"/>
 <label x="210.82" y="66.04" size="1.778" layer="95"/>
 <wire x1="220.98" y1="66.04" x2="220.98" y2="129.54" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="GND"/>
-<wire x1="33.02" y1="101.6" x2="33.02" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="USB_TO_GND" gate="G$1" pin="TP"/>
 </segment>
 </net>
 </nets>
