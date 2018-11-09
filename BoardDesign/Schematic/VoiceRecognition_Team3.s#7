@@ -11974,7 +11974,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="100nF"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="10uF"/>
-<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -12197,9 +12196,6 @@ Microprocessor</text>
 <attribute name="NAME" x="158.496" y="163.195" size="1.778" layer="95"/>
 <attribute name="VALUE" x="158.496" y="158.369" size="1.778" layer="96"/>
 </instance>
-<instance part="GND10" gate="1" x="33.02" y="86.36" smashed="yes">
-<attribute name="VALUE" x="30.48" y="83.82" size="1.778" layer="96"/>
-</instance>
 <instance part="GND11" gate="1" x="109.22" y="157.48" smashed="yes">
 <attribute name="VALUE" x="106.68" y="154.94" size="1.778" layer="96"/>
 </instance>
@@ -12314,7 +12310,7 @@ Microprocessor</text>
 <attribute name="TP_SIGNAL_NAME" x="77.47" y="168.91" size="1.778" layer="97"/>
 </instance>
 <instance part="SCK" gate="G$1" x="78.74" y="160.02" smashed="yes">
-<attribute name="NAME" x="80.01" y="161.29" size="1.778" layer="95"/>
+<attribute name="NAME" x="82.55" y="163.83" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="80.01" y="158.75" size="1.778" layer="97"/>
 </instance>
 <instance part="MISO" gate="G$1" x="116.84" y="167.64" smashed="yes">
@@ -12379,6 +12375,11 @@ Microprocessor</text>
 </instance>
 </instances>
 <busses>
+<bus name="MISO,MOSI,RST,SCK">
+<segment>
+<wire x1="116.84" y1="129.54" x2="228.6" y2="129.54" width="0.762" layer="92"/>
+</segment>
+</bus>
 </busses>
 <nets>
 <net name="GND" class="0">
@@ -12412,14 +12413,6 @@ Microprocessor</text>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="147.32" y1="154.94" x2="147.32" y2="152.4" width="0.1524" layer="91"/>
 <junction x="147.32" y="154.94"/>
-</segment>
-<segment>
-<pinref part="X1" gate="G$1" pin="GND"/>
-<pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="33.02" y1="101.6" x2="33.02" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="USB_TO_GND" gate="G$1" pin="TP"/>
-<wire x1="33.02" y1="93.98" x2="33.02" y2="88.9" width="0.1524" layer="91"/>
-<junction x="33.02" y="93.98"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="6"/>
@@ -12553,9 +12546,6 @@ Microprocessor</text>
 </net>
 <net name="RST" class="0">
 <segment>
-<wire x1="152.4" y1="139.7" x2="152.4" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="/RESET"/>
-<wire x1="152.4" y1="109.22" x2="157.48" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="RESET1" gate="G$1" pin="P$2"/>
 <wire x1="53.34" y1="167.64" x2="53.34" y2="162.56" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="5"/>
@@ -12564,13 +12554,20 @@ Microprocessor</text>
 <wire x1="60.96" y1="162.56" x2="68.58" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="162.56" x2="91.44" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="162.56" x2="68.58" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="139.7" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
 <junction x="68.58" y="162.56"/>
 <pinref part="R8" gate="G$1" pin="1"/>
 <junction x="60.96" y="162.56"/>
 <pinref part="TP4" gate="G$1" pin="TP"/>
 <junction x="55.88" y="162.56"/>
 <pinref part="RESET" gate="G$1" pin="TP"/>
+<wire x1="68.58" y1="139.7" x2="116.84" y2="139.7" width="0.1524" layer="91"/>
+<label x="88.9" y="139.7" size="1.778" layer="95"/>
+<wire x1="116.84" y1="139.7" x2="116.84" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="/RESET"/>
+<wire x1="152.4" y1="109.22" x2="157.48" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="109.22" x2="152.4" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HWB" class="0">
@@ -12587,20 +12584,23 @@ Microprocessor</text>
 <junction x="228.6" y="91.44"/>
 </segment>
 </net>
-<net name="N$13" class="0">
+<net name="MOSI" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="1"/>
 <wire x1="91.44" y1="167.64" x2="76.2" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="167.64" x2="73.66" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="167.64" x2="73.66" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="147.32" x2="119.38" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="147.32" x2="119.38" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="134.62" x2="226.06" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="PB2(PDI/MOSI)"/>
-<wire x1="226.06" y1="63.5" x2="205.74" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="134.62" x2="226.06" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="147.32" x2="119.38" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="MOSI" gate="G$1" pin="TP"/>
 <junction x="76.2" y="167.64"/>
+<label x="91.44" y="147.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PB2(PDI/MOSI)"/>
+<wire x1="226.06" y1="63.5" x2="205.74" y2="63.5" width="0.1524" layer="91"/>
+<label x="215.9" y="63.5" size="1.778" layer="95"/>
+<wire x1="226.06" y1="63.5" x2="226.06" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -12718,20 +12718,6 @@ Microprocessor</text>
 <wire x1="238.76" y1="58.42" x2="205.74" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$17" class="0">
-<segment>
-<wire x1="220.98" y1="132.08" x2="124.46" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="132.08" x2="124.46" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="PB3(PDO/MISO)"/>
-<wire x1="220.98" y1="132.08" x2="220.98" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="66.04" x2="205.74" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="4"/>
-<wire x1="99.06" y1="165.1" x2="116.84" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="MISO" gate="G$1" pin="TP"/>
-<wire x1="116.84" y1="165.1" x2="124.46" y2="165.1" width="0.1524" layer="91"/>
-<junction x="116.84" y="165.1"/>
-</segment>
-</net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="D+"/>
@@ -12825,19 +12811,21 @@ Microprocessor</text>
 <wire x1="127" y1="76.2" x2="147.32" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="SCK" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="3"/>
 <wire x1="78.74" y1="157.48" x2="91.44" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="157.48" x2="78.74" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="152.4" x2="121.92" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="152.4" x2="121.92" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="124.46" x2="215.9" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="PB1(SCK)"/>
-<wire x1="215.9" y1="124.46" x2="215.9" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="60.96" x2="205.74" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="SCK" gate="G$1" pin="TP"/>
 <junction x="78.74" y="157.48"/>
+<label x="88.9" y="152.4" size="1.778" layer="95"/>
+<wire x1="121.92" y1="152.4" x2="121.92" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PB1(SCK)"/>
+<wire x1="215.9" y1="129.54" x2="215.9" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="60.96" x2="205.74" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MIC_SIGNAL" class="0">
@@ -12912,6 +12900,30 @@ Microprocessor</text>
 <wire x1="33.02" y1="109.22" x2="40.64" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="109.22" x2="40.64" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="VCC_TO_USB" gate="G$1" pin="TP"/>
+</segment>
+</net>
+<net name="MISO" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="4"/>
+<wire x1="99.06" y1="165.1" x2="116.84" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="MISO" gate="G$1" pin="TP"/>
+<junction x="116.84" y="165.1"/>
+<wire x1="116.84" y1="165.1" x2="124.46" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="129.54" x2="124.46" y2="165.1" width="0.1524" layer="91"/>
+<label x="121.92" y="165.1" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PB3(PDO/MISO)"/>
+<wire x1="220.98" y1="66.04" x2="205.74" y2="66.04" width="0.1524" layer="91"/>
+<label x="210.82" y="66.04" size="1.778" layer="95"/>
+<wire x1="220.98" y1="66.04" x2="220.98" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="X1" gate="G$1" pin="GND"/>
+<wire x1="33.02" y1="101.6" x2="33.02" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="USB_TO_GND" gate="G$1" pin="TP"/>
 </segment>
 </net>
 </nets>
