@@ -11946,7 +11946,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="VCC" width="0.05" drill="0">
+</class>
+<class number="1" name="GND" width="0.00126875" drill="0">
 </class>
 </classes>
 <parts>
@@ -12012,7 +12014,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="PWR_BLU" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="FUNC_GRN" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="WARN_YELL" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
-<part name="NOFUNC_RED" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="!HWB" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="RESET" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="VCC_TO_MIC" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
@@ -12029,6 +12030,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="C11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="100nF"/>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="NOFUNC_RED1" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -12057,16 +12059,6 @@ Voice Recognition Processor</text>
 <wire x1="271.78" y1="48.26" x2="241.3" y2="48.26" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="241.3" y1="48.26" x2="241.3" y2="86.36" width="0.1524" layer="97" style="shortdash"/>
 <text x="248.92" y="88.9" size="1.778" layer="97">Servo Output</text>
-<text x="132.08" y="170.18" size="1.778" layer="97">63 VDC
-TOL: 20%</text>
-<text x="152.4" y="170.18" size="1.778" layer="97">25 VDC
-TOL: 20%</text>
-<text x="104.14" y="58.42" size="1.778" layer="97">63 VDC
-TOL: 20%</text>
-<text x="96.52" y="81.28" size="1.778" layer="97">2kVDC
-TOL: 5%</text>
-<text x="96.52" y="96.52" size="1.778" layer="97">2kVDC
-TOL: 5%</text>
 <text x="76.2" y="177.8" size="1.778" layer="97">Note that ICSP does not
 provide power</text>
 <wire x1="12.7" y1="137.16" x2="53.34" y2="137.16" width="0.1524" layer="97" style="shortdash"/>
@@ -12105,8 +12097,18 @@ Microprocessor</text>
 <wire x1="274.32" y1="142.24" x2="208.28" y2="142.24" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="208.28" y1="142.24" x2="208.28" y2="185.42" width="0.1524" layer="97" style="shortdash"/>
 <text x="35.56" y="177.8" size="1.778" layer="97">NC</text>
-<text x="243.84" y="27.94" size="1.778" layer="97">R1, R2, R3, R5, R6, R7:
-250mW, 1% TOL</text>
+<text x="241.3" y="15.24" size="1.778" layer="97">R1, R2, R3, R5, R6, R7:
+250mW, 1% TOL
+
+C1, C2:
+2kVDC, 5% TOL
+
+C3, C4:
+63 VDC, 20% TOL
+
+C5:
+25 VDC, 20% TOL</text>
+<text x="200.66" y="157.48" size="1.778" layer="97" rot="R90">+12VDC MAX</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="276.86" y="2.54" rot="R90">
@@ -12130,9 +12132,9 @@ Microprocessor</text>
 <attribute name="NAME" x="54.61" y="85.3186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="54.61" y="80.518" size="1.778" layer="96"/>
 </instance>
-<instance part="R3" gate="G$1" x="246.38" y="152.4" rot="R180">
-<attribute name="NAME" x="250.19" y="150.9014" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="250.19" y="155.702" size="1.778" layer="96" rot="R180"/>
+<instance part="R3" gate="G$1" x="243.84" y="152.4" rot="R180">
+<attribute name="NAME" x="247.65" y="150.9014" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="247.65" y="155.702" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R4" gate="G$1" x="223.52" y="43.18" rot="R90">
 <attribute name="NAME" x="222.0214" y="39.37" size="1.778" layer="95" rot="R90"/>
@@ -12219,8 +12221,8 @@ Microprocessor</text>
 <instance part="P+10" gate="VCC" x="228.6" y="180.34">
 <attribute name="VALUE" x="226.06" y="180.34" size="1.778" layer="96"/>
 </instance>
-<instance part="P+12" gate="VCC" x="149.86" y="127">
-<attribute name="VALUE" x="147.32" y="124.46" size="1.778" layer="96" rot="R90"/>
+<instance part="P+12" gate="VCC" x="149.86" y="124.46">
+<attribute name="VALUE" x="147.32" y="121.92" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="P+13" gate="VCC" x="223.52" y="55.88">
 <attribute name="VALUE" x="220.98" y="58.42" size="1.778" layer="96"/>
@@ -12259,9 +12261,9 @@ Microprocessor</text>
 <instance part="P+2" gate="VCC" x="60.96" y="175.26">
 <attribute name="VALUE" x="58.42" y="175.26" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C12" gate="G$1" x="142.24" y="119.38" rot="R270">
-<attribute name="NAME" x="135.636" y="120.015" size="1.778" layer="95"/>
-<attribute name="VALUE" x="133.096" y="117.729" size="1.778" layer="96"/>
+<instance part="C12" gate="G$1" x="142.24" y="116.84" rot="R270">
+<attribute name="NAME" x="135.636" y="117.475" size="1.778" layer="95"/>
+<attribute name="VALUE" x="133.096" y="115.189" size="1.778" layer="96"/>
 </instance>
 <instance part="J1" gate="G$1" x="185.42" y="170.18" rot="R270">
 <attribute name="VALUE" x="195.58" y="180.34" size="1.778" layer="96" font="vector" rot="R270"/>
@@ -12338,10 +12340,6 @@ Microprocessor</text>
 <attribute name="NAME" x="247.65" y="158.75" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="245.11" y="161.29" size="1.778" layer="97" rot="R180"/>
 </instance>
-<instance part="NOFUNC_RED" gate="G$1" x="241.3" y="154.94">
-<attribute name="NAME" x="242.57" y="146.05" size="1.778" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="242.57" y="153.67" size="1.778" layer="97"/>
-</instance>
 <instance part="!HWB" gate="G$1" x="228.6" y="93.98">
 <attribute name="NAME" x="227.33" y="95.25" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="229.87" y="92.71" size="1.778" layer="97"/>
@@ -12399,6 +12397,10 @@ Microprocessor</text>
 </instance>
 <instance part="GND22" gate="1" x="33.02" y="88.9">
 <attribute name="VALUE" x="30.48" y="86.36" size="1.778" layer="96"/>
+</instance>
+<instance part="NOFUNC_RED1" gate="G$1" x="251.46" y="149.86" rot="R180">
+<attribute name="NAME" x="252.73" y="148.59" size="1.778" layer="95" rot="R180"/>
+<attribute name="TP_SIGNAL_NAME" x="250.19" y="151.13" size="1.778" layer="97" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -12553,8 +12555,8 @@ Microprocessor</text>
 <wire x1="127" y1="111.76" x2="127" y2="101.6" width="0.1524" layer="91"/>
 <junction x="127" y="101.6"/>
 <pinref part="C12" gate="G$1" pin="2"/>
-<wire x1="137.16" y1="119.38" x2="127" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="127" y1="119.38" x2="127" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="116.84" x2="127" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="127" y1="116.84" x2="127" y2="111.76" width="0.1524" layer="91"/>
 <junction x="127" y="111.76"/>
 </segment>
 <segment>
@@ -12592,8 +12594,11 @@ Microprocessor</text>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="251.46" y1="152.4" x2="254" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="152.4" x2="251.46" y2="152.4" width="0.1524" layer="91"/>
 <label x="254" y="152.4" size="1.778" layer="95" xref="yes"/>
+<pinref part="NOFUNC_RED1" gate="G$1" pin="TP"/>
+<wire x1="251.46" y1="152.4" x2="254" y2="152.4" width="0.1524" layer="91"/>
+<junction x="251.46" y="152.4"/>
 </segment>
 </net>
 <net name="RST" class="0">
@@ -12679,8 +12684,8 @@ Microprocessor</text>
 <segment>
 <pinref part="P+12" gate="VCC" pin="VCC"/>
 <pinref part="U$1" gate="G$1" pin="VBUS"/>
-<wire x1="149.86" y1="124.46" x2="149.86" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="119.38" x2="149.86" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="121.92" x2="149.86" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="116.84" x2="149.86" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="104.14" x2="152.4" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="VCC"/>
 <wire x1="152.4" y1="104.14" x2="157.48" y2="104.14" width="0.1524" layer="91"/>
@@ -12721,8 +12726,8 @@ Microprocessor</text>
 <wire x1="134.62" y1="111.76" x2="144.78" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="111.76" x2="144.78" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="119.38" x2="149.86" y2="119.38" width="0.1524" layer="91"/>
-<junction x="149.86" y="119.38"/>
+<wire x1="144.78" y1="116.84" x2="149.86" y2="116.84" width="0.1524" layer="91"/>
+<junction x="149.86" y="116.84"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -12928,10 +12933,8 @@ Microprocessor</text>
 <pinref part="LEDARRAY" gate="G$1" pin="7"/>
 <wire x1="223.52" y1="157.48" x2="231.14" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="157.48" x2="231.14" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="152.4" x2="241.3" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="NOFUNC_RED" gate="G$1" pin="TP"/>
+<wire x1="231.14" y1="152.4" x2="238.76" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<junction x="241.3" y="152.4"/>
 </segment>
 </net>
 <net name="LOCK_RESET" class="0">
