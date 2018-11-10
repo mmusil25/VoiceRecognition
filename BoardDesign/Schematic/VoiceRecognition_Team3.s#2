@@ -11946,7 +11946,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="VCC" width="0.05" drill="0">
+</class>
+<class number="1" name="GND" width="0.00126875" drill="0">
 </class>
 </classes>
 <parts>
