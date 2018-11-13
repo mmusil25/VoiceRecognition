@@ -12012,7 +12012,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="V_ICSP" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="GND_ICSP" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="PWR_BLU" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
-<part name="FUNC_GRN" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="WARN_YELL" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="!HWB" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 <part name="RESET" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
@@ -12031,6 +12030,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="NOFUNC_RED1" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
+<part name="FUNC_GRN" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15SQ" package3d_urn="urn:adsk.eagle:package:27975/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -12332,10 +12332,6 @@ C5:
 <attribute name="NAME" x="234.95" y="181.61" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="234.95" y="179.07" size="1.778" layer="97"/>
 </instance>
-<instance part="FUNC_GRN" gate="G$1" x="243.84" y="170.18">
-<attribute name="NAME" x="247.65" y="171.45" size="1.778" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="245.11" y="168.91" size="1.778" layer="97"/>
-</instance>
 <instance part="WARN_YELL" gate="G$1" x="246.38" y="160.02" rot="R180">
 <attribute name="NAME" x="247.65" y="158.75" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="245.11" y="161.29" size="1.778" layer="97" rot="R180"/>
@@ -12401,6 +12397,10 @@ C5:
 <instance part="NOFUNC_RED1" gate="G$1" x="251.46" y="149.86" rot="R180">
 <attribute name="NAME" x="252.73" y="148.59" size="1.778" layer="95" rot="R180"/>
 <attribute name="TP_SIGNAL_NAME" x="250.19" y="151.13" size="1.778" layer="97" rot="R180"/>
+</instance>
+<instance part="FUNC_GRN" gate="G$1" x="246.38" y="170.18">
+<attribute name="NAME" x="245.11" y="171.45" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="247.65" y="168.91" size="1.778" layer="97"/>
 </instance>
 </instances>
 <busses>
@@ -12566,24 +12566,6 @@ C5:
 <pinref part="GND22" gate="1" pin="GND"/>
 <wire x1="33.02" y1="91.44" x2="33.02" y2="93.98" width="0.1524" layer="91"/>
 <junction x="33.02" y="93.98"/>
-</segment>
-</net>
-<net name="FUNC_GRN" class="0">
-<segment>
-<pinref part="LEDARRAY" gate="G$1" pin="3"/>
-<wire x1="228.6" y1="167.64" x2="223.52" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="PB4(ADC11)"/>
-<wire x1="205.74" y1="68.58" x2="233.68" y2="68.58" width="0.1524" layer="91"/>
-<label x="233.68" y="68.58" size="1.778" layer="95" rot="R270" xref="yes"/>
-</segment>
-<segment>
-<pinref part="FUNC_GRN" gate="G$1" pin="TP"/>
-<wire x1="243.84" y1="167.64" x2="238.76" y2="167.64" width="0.1524" layer="91"/>
-<label x="243.84" y="167.64" size="1.778" layer="95" xref="yes"/>
-<pinref part="R7" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="NOFUNC_RED" class="0">
@@ -12989,18 +12971,36 @@ C5:
 <wire x1="147.32" y1="76.2" x2="111.76" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="LEDARRAY" gate="G$1" pin="3"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="223.52" y1="167.64" x2="228.6" y2="167.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="FUNC_GRN" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PB4(ADC11)"/>
+<wire x1="205.74" y1="68.58" x2="218.44" y2="68.58" width="0.1524" layer="91"/>
+<label x="218.44" y="68.58" size="1.778" layer="95" xref="yes"/>
+<label x="248.92" y="167.64" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="238.76" y1="167.64" x2="246.38" y2="167.64" width="0.1524" layer="91"/>
+<pinref part="FUNC_GRN" gate="G$1" pin="TP"/>
+<wire x1="246.38" y1="167.64" x2="248.92" y2="167.64" width="0.1524" layer="91"/>
+<junction x="246.38" y="167.64"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 <errors>
 <approved hash="104,1,33.02,109.22,X1,VBUS,N$7,,,"/>
 <approved hash="113,1,138.534,95.146,FRAME1,,,,,"/>
-<approved hash="113,1,95.2077,166.596,ICSP_INPUT,,,,,"/>
 <approved hash="113,1,221.91,27.94,SJ1,,,,,"/>
-<approved hash="113,1,41.9748,42.3393,MIC_INPUT,,,,,"/>
 <approved hash="113,1,48.26,169.393,RESET1,,,,,"/>
-<approved hash="113,1,219.947,165.326,LEDARRAY,,,,,"/>
-<approved hash="115,1,226.06,167.64,FUNC_GRN,,,,,"/>
 </errors>
 </schematic>
 </drawing>
