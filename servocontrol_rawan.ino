@@ -1,16 +1,18 @@
+#include <Servo.h>
 #include <uspeech.h>
 //#define LED pins
-  #define blue 11
-  #define red 10
-  #define green 9
-  #define button A0
+  #define blue 9
+  #define red 4
+  #define green 8
+  #define yellow 2
+  #define button 7
 signal voice(A0);
 int time; // this calibrates our time for library use
 bool first = true, word_waiting = false;
 syllable syll; // name of our accumulator class
-Servo lock_mechanism // this is the name of our servo object 
+Servo lock_mechanism; // this is the name of our servo object 
 
- void setup(){ // This runs once on startup
+void setup(){ // This runs once on startup
   //########################################
   //#DEBUG STUFF, delete for final delivery#
   //#These were values we tried along the way. They didn't work at that time.
@@ -32,7 +34,12 @@ Servo lock_mechanism // this is the name of our servo object
   Serial.begin(9600);
   time = millis(); // DEBUG THIS, it was placed in a different place in example
   voice.calibrate(); // call to calibrate function
-  
+  lock_mechanism.attach(10);
+  pinMode(red, OUTPUT); 
+  pinMode(yellow, OUTPUT); 
+  pinMode(blue, OUTPUT); 
+  pinMode(green, OUTPUT);
+  pinMode(button, OUTPUT);  
  }
  //This is the unlock function; it just writes to the servo.
 void unlock(){
@@ -57,52 +64,57 @@ void lock(){
     int i = 0;
     
     //  Test for the presence of the button
-    if(button){
+    if(digitalRead(button)){
       lock();
+      digitalWrite(red, HIGH);
     }
     
     char a_phoneme = voice.getPhoneme(); //listen for and collect a word
     Serial.println(voice.getPhoneme()); // print the phoneme you got for debugging
     if(a_phoneme != ' ') {
       if (word_waiting){
-        int sum = s.f+s.o+s.v+s.s+s.h;
-        if (sum > 30){
-          if (s.s > 3){
-              if(s.e > 3){
-                    unlock();
-                    while( i <= 3){
-                    digitalWrite(green, HIGH);
-                    delay(200);
-                    digitalWrite(green, LOW);
-                    delay(200)
-                    i++;
-                  }
-              }
-           else{
-                    while( i <= 3){
-                    digitalWrite(red, High);
-                    delay(200);
-                    digitalWrite(green, LOW);
-                    delay(200)
-                    i++;
-                  }
-           }
+        int sum = syll.f+syll.o+syll.v+syll.s+syll.h;
+        if (sum > 3){
+          if (syll.s > 1){
+                    if(syll.e > 1){
+                                  i = 0;
+                                  unlock();
+                                  while( i <= 3){
+                                  digitalWrite(green, HIGH);
+                                  delay(200);
+                                   digitalWrite(green, LOW);
+                                   delay(200);
+                                    i++;
+                                  }
+                    }
+                    else{
+                          i = 0;
+                          while( i <= 3){
+                          digitalWrite(red, HIGH);
+                          delay(200);
+                          digitalWrite(green, LOW);
+                          delay(200);
+                          i++;
+                          }
+                        }
          }
+       }
 
-      s.f = 0;
-      s.e = 0;
-      s.o = 0;
-      s.v = 0;
-      s.s = 0;
-      s.h = 0;     
+      syll.f = 0;
+      syll.e = 0;
+      syll.o = 0;
+      syll.v = 0;
+      syll.s = 0;
+      syll.h = 0;     
       word_waiting = false;      
     }
  }
   else{
           if(first){
-            s.classify(c);
+            syll.classify(a_phoneme);
             word_waiting = true;
           }
  
-    }
+    }    
  }
+}
