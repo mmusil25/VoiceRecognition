@@ -1,0 +1,150 @@
+#include <Servo.h>
+#include <uspeech.h>
+//#define LED pins
+  #define blue 9
+  #define red 4
+  #define green 8
+  #define yellow 2
+  #define button 7
+signal voice(A0);
+int time; // this calibrates our time for library use
+bool first = true, word_waiting = false;
+syllable syll; // name of our accumulator class
+Servo lock_mechanism; // this is the name of our servo object 
+int sum = 0;
+int i = 0;
+
+void setup(){ // This runs once on startup
+  //########################################
+  //#DEBUG STUFF, delete for final delivery#
+  //#These were values we tried along the way. They didn't work at that time.
+  //#voice.minVolume = 50; // was 600
+  //#voice.econstant = 2; // this value never exceeds 1 good
+  //#voice.aconstant = 4; // this value never exceeds 3, thinks it's o
+  //#voice.fconstant = 300; // THIS VALUE BREAKS OUR STUFF
+  //#voice.vconstant = 5; // doesn't exceed 4
+  //#voice.shconstant = 8; // doesn't go under 8, goes 8-12
+  //#voice.f_enabled = true; // THIS VALUE MAKES /f/ WORK AND EVERYTHING ELSE BREAKS
+  //#voice.amplificationFactor = 2; // let's try to boost our signal
+  //#######################################
+  voice.minVolume = 200; // was 600
+  voice.econstant = 2; // this value never exceeds 1 good
+  voice.aconstant = 4; // this value never exceeds 3, thinks it's o
+  voice.vconstant = 6; // doesn't exceed 4
+  voice.shconstant = 8; // doesn't go under 8, goes 8-12
+  voice.fconstant = 400;
+  Serial.begin(9600);
+  //time = millis(); // DEBUG THIS, it was placed in a different place in example
+  voice.calibrate(); // call to calibrate function
+  lock_mechanism.attach(10);
+  pinMode(red, OUTPUT); 
+  pinMode(yellow, OUTPUT); 
+  pinMode(blue, OUTPUT); 
+  pinMode(green, OUTPUT);
+  pinMode(button, OUTPUT);  
+ }
+ //This is the unlock function; it just writes to the servo.
+void unlock(){
+  lock_mechanism.write(0); //make sure this works, it should go 90 degrees to the right 
+  Serial.println("This is a debug statement to prove that unlock worked.");
+}
+ //This is the lock function, to be triggered when the user pushes a button on the lid
+void lock(){
+  lock_mechanism.write(90); // returns to the center
+  Serial.println("This is a debug statement to prove that lock worked.");
+}
+ void loop(){
+ // while(true){
+  // ###############################################################
+  // # This loop tests for silence. If it's silent it checks the last thing it heard when
+  // # it wasn't silent. If it isn't silent it starts accumulating phonemes for testing.
+  // # After testing a word, it should clear the accumulators and set word_waiting to false.
+  // # This keeps it from holding on to garbage phonemes.
+  // # This also means that the word is only tested after you stop talking.
+  // # Test for the presence of the password ("sesame" or "seesaw")
+  // ################################################################
+    //int i = 0;
+    
+    //  Test for the presence of the button
+    if(digitalRead(button)){
+      lock();
+      digitalWrite(red, HIGH);
+      delay(200);
+      digitalWrite(red, LOW);
+      delay(200);
+    }
+    
+    char a_phoneme = voice.getPhoneme(); //listen for and collect a word
+    //syll.debugPrint();
+  // Serial.println(voice.getPhoneme()); // print the phoneme you got for debugging
+    if(a_phoneme == ' ') {
+      //digitalWrite(green, HIGH);
+     // delay(200);
+     // digitalWrite(green, LOW);
+     // delay(200);
+      if (word_waiting){
+         sum = syll.f+syll.o+syll.v+syll.s+syll.h+syll.e;
+        digitalWrite(blue, HIGH);
+      delay(200);
+        digitalWrite(blue, LOW);
+      delay(200);
+        if (sum > 90){
+          syll.debugPrint();
+          Serial.println(voice.getPhoneme()); // print the phoneme you got for debugging
+          digitalWrite(yellow, HIGH);
+      delay(200);
+          digitalWrite(yellow, LOW);
+      delay(200);
+          if (syll.s > 4){
+                    if(syll.e > 30){
+                                  i = 0;
+                                  unlock();
+                                  while( i <= 3){
+                                  digitalWrite(green, HIGH);
+                                  delay(200);
+                                   digitalWrite(green, LOW);
+                                   delay(200);
+                                    i++;
+                                  }
+                                  
+                    }
+                    else{
+                      if(syll.v > 3)
+                            unlock();
+                    }
+          }else{
+                          i = 0;
+
+                          if(syll.h < 4)
+                          unlock();
+                          while( i <= 3){
+                          digitalWrite(red, HIGH);
+                          delay(200);
+                          digitalWrite(green, HIGH);
+                          delay(200);
+                          digitalWrite(green, LOW);
+                          digitalWrite(red, LOW);
+                          i++;
+                          }
+                        }
+       }
+
+      syll.f = 0;
+      syll.e = 0;
+      syll.o = 0;
+      syll.v = 0;
+      syll.s = 0;
+      syll.h = 0;     
+      word_waiting = false;      
+    }
+ }
+  else{
+          if(first){
+             time = millis();
+          }
+          syll.classify(a_phoneme);
+            word_waiting = true;
+ 
+    }    
+  //}
+}
