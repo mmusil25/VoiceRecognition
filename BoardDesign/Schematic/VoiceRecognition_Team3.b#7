@@ -2361,7 +2361,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="73.66" y1="48.26" x2="73.66" y2="49.53" width="0.508" layer="1"/>
 <wire x1="73.66" y1="49.53" x2="74.93" y2="50.8" width="0.508" layer="1"/>
 <wire x1="74.93" y1="50.8" x2="76.2" y2="50.8" width="0.508" layer="1"/>
-<wire x1="80.01" y1="59.69" x2="80.42" y2="59.69" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="RST">
 <contactref element="RESET1" pad="P$2"/>

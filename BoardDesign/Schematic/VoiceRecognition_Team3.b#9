@@ -2271,8 +2271,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="74.93" y1="48.26" x2="73.66" y2="48.26" width="0.508" layer="1"/>
 <wire x1="87.63" y1="9.14" x2="87.57" y2="9.2" width="0.1524" layer="1"/>
 <wire x1="93.98" y1="2.54" x2="89.2125" y2="2.54" width="0.508" layer="1"/>
-<wire x1="89.2125" y1="2.54" x2="87.78625" y2="3.96625" width="0.508" layer="1"/>
-<wire x1="87.78625" y1="3.96625" x2="87.60125" y2="4.15125" width="0.508" layer="1"/>
 <wire x1="88.9" y1="25.4" x2="99.06" y2="25.4" width="0.508" layer="1"/>
 <wire x1="86.23" y1="22.73" x2="76.2" y2="22.73" width="0.508" layer="1"/>
 <wire x1="88.9" y1="25.4" x2="86.23" y2="22.73" width="0.508" layer="1"/>
@@ -2354,9 +2352,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <vertex x="105.41" y="0"/>
 <vertex x="105.41" y="63.5"/>
 </polygon>
-<wire x1="87.60125" y1="4.15125" x2="86.36" y2="5.3925" width="0.508" layer="1"/>
+<wire x1="89.2125" y1="2.54" x2="86.36" y2="5.3925" width="0.508" layer="1"/>
 <wire x1="86.36" y1="5.3925" x2="86.36" y2="7.87" width="0.508" layer="1"/>
 <wire x1="86.36" y1="7.87" x2="87.63" y2="9.14" width="0.508" layer="1"/>
+<via x="30.48" y="3.81" extent="1-16" drill="0.35"/>
+<wire x1="30.48" y1="3.81" x2="31.75" y2="3.81" width="0.508" layer="1"/>
+<wire x1="31.75" y1="3.81" x2="33.02" y2="5.08" width="0.508" layer="1"/>
 </signal>
 <signal name="RST">
 <contactref element="RESET1" pad="P$2"/>
