@@ -2467,16 +2467,9 @@ design rules under a new name.</description>
 <wire x1="52.07" y1="54.61" x2="52.07" y2="50.8" width="1.27" layer="1"/>
 <wire x1="53.34" y1="29.87" x2="56.43" y2="29.87" width="0.508" layer="1"/>
 <wire x1="85.09" y1="44.45" x2="82.55" y2="41.91" width="1.27" layer="1"/>
-<contactref element="J1" pad="VIN0"/>
-<contactref element="SERVO_OUT" pad="1"/>
-<contactref element="V_BARREL" pad="TP"/>
 <wire x1="63.5" y1="7.62" x2="63.5" y2="2.54" width="1.27" layer="1"/>
 <wire x1="68.03" y1="23.47" x2="65.43" y2="23.47" width="0.508" layer="1"/>
-<wire x1="95.25" y1="55.23" x2="90.17" y2="55.23" width="1.27" layer="1"/>
-<wire x1="95.25" y1="58.42" x2="96.52" y2="59.69" width="1.27" layer="1"/>
-<wire x1="95.25" y1="58.42" x2="95.25" y2="55.23" width="1.27" layer="1"/>
 <wire x1="90.17" y1="55.23" x2="87.63" y2="52.69" width="1.27" layer="1"/>
-<wire x1="87.63" y1="52.69" x2="87.63" y2="50.8" width="1.27" layer="1"/>
 <contactref element="C9" pad="1"/>
 <contactref element="U$1" pad="44"/>
 <contactref element="C11" pad="1"/>
@@ -2520,7 +2513,6 @@ design rules under a new name.</description>
 <wire x1="38.1" y1="54.61" x2="52.07" y2="54.61" width="1.27" layer="1"/>
 <wire x1="35.69" y1="36.83" x2="35.69" y2="52.2" width="1.27" layer="1"/>
 <wire x1="35.69" y1="52.2" x2="38.1" y2="54.61" width="1.27" layer="1"/>
-<wire x1="90.17" y1="48.26" x2="87.63" y2="50.8" width="0.508" layer="1"/>
 <wire x1="54.74" y1="11.43" x2="54.61" y2="11.56" width="0.508" layer="1"/>
 <wire x1="54.74" y1="11.43" x2="57.15" y2="11.43" width="0.508" layer="1"/>
 <wire x1="57.15" y1="11.43" x2="57.15" y2="19.05" width="0.508" layer="1"/>
@@ -2558,6 +2550,12 @@ design rules under a new name.</description>
 <wire x1="87.63" y1="39.37" x2="90.17" y2="39.37" width="0.508" layer="16"/>
 <via x="90.17" y="39.37" extent="1-16" drill="0.35"/>
 <wire x1="90.17" y1="39.37" x2="90.17" y2="48.26" width="0.508" layer="1"/>
+<contactref element="X1" pad="1"/>
+<contactref element="TP_USB" pad="TP"/>
+<wire x1="90.17" y1="22.86" x2="87.57" y2="20.26" width="0.508" layer="1"/>
+<wire x1="87.57" y1="16.2" x2="87.57" y2="20.26" width="0.508" layer="1"/>
+<wire x1="87.63" y1="52.69" x2="90.17" y2="48.26" width="0" layer="19" extent="1-1"/>
+<wire x1="90.17" y1="22.86" x2="90.17" y2="39.37" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SIGNAL">
 <contactref element="SERVO_OUT" pad="2"/>
@@ -2698,12 +2696,6 @@ design rules under a new name.</description>
 <wire x1="67.31" y1="33.55" x2="67.31" y2="35.56" width="0.508" layer="1"/>
 <wire x1="67.31" y1="35.56" x2="69.85" y2="38.1" width="0.508" layer="1"/>
 </signal>
-<signal name="N$7">
-<contactref element="X1" pad="1"/>
-<contactref element="TP_USB" pad="TP"/>
-<wire x1="90.17" y1="22.86" x2="87.57" y2="20.26" width="0.508" layer="1"/>
-<wire x1="87.57" y1="16.2" x2="87.57" y2="20.26" width="0.508" layer="1"/>
-</signal>
 <signal name="MISO">
 <contactref element="ICSP_INPUT" pad="4"/>
 <contactref element="MISO" pad="TP"/>
@@ -2745,6 +2737,14 @@ design rules under a new name.</description>
 <wire x1="44.45" y1="26.67" x2="41.91" y2="29.21" width="0.508" layer="1"/>
 <wire x1="41.91" y1="29.21" x2="38.1" y2="29.21" width="0.508" layer="1"/>
 <wire x1="38.1" y1="29.21" x2="35.69" y2="31.75" width="0.508" layer="1"/>
+</signal>
+<signal name="N$7">
+<contactref element="J1" pad="VIN0"/>
+<contactref element="SERVO_OUT" pad="1"/>
+<contactref element="V_BARREL" pad="TP"/>
+<wire x1="95.25" y1="58.42" x2="96.52" y2="59.69" width="1.27" layer="1"/>
+<wire x1="95.25" y1="58.42" x2="95.25" y2="55.23" width="1.27" layer="1"/>
+<wire x1="87.63" y1="50.8" x2="95.25" y2="55.23" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

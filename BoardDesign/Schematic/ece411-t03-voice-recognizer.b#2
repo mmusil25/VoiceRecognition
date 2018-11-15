@@ -2376,6 +2376,9 @@ design rules under a new name.</description>
 <via x="97.79" y="27.94" extent="1-16" drill="0.35"/>
 <wire x1="97.79" y1="27.94" x2="96.52" y2="26.67" width="0.508" layer="1"/>
 <wire x1="96.52" y1="26.67" x2="96.52" y2="25.4" width="0.508" layer="1"/>
+<via x="40.64" y="49.53" extent="1-16" drill="0.35"/>
+<via x="16.51" y="35.56" extent="1-16" drill="0.35"/>
+<via x="21.59" y="46.99" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="RST">
 <contactref element="RESET1" pad="P$2"/>
@@ -2745,9 +2748,6 @@ design rules under a new name.</description>
 <wire x1="44.45" y1="26.67" x2="41.91" y2="29.21" width="0.508" layer="1"/>
 <wire x1="41.91" y1="29.21" x2="38.1" y2="29.21" width="0.508" layer="1"/>
 <wire x1="38.1" y1="29.21" x2="35.69" y2="31.75" width="0.508" layer="1"/>
-</signal>
-<signal name="S$1">
-<via x="22.86" y="45.72" extent="1-16" drill="0.35"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
