@@ -1767,7 +1767,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <class number="1" name="GND" width="0.00126875" drill="0">
 </class>
 </classes>
-<designrules name="oshpark_2layer">
+<designrules name="oshpark-2layer">
 <description language="en">&lt;b&gt;OSH Park Design Rules&lt;/b&gt;
 &lt;p&gt;
 Please make sure your boards conform to these design rules.
@@ -2339,29 +2339,28 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="96.52" y1="43.83" x2="102.62" y2="43.83" width="0.508" layer="1"/>
 <wire x1="102.62" y1="43.83" x2="102.87" y2="43.58" width="0.508" layer="1"/>
 <wire x1="102.87" y1="43.58" x2="102.87" y2="38.1" width="0.508" layer="1"/>
-<wire x1="96.52" y1="43.83" x2="95.87" y2="43.18" width="0.508" layer="1"/>
-<wire x1="95.87" y1="43.18" x2="93.98" y2="43.18" width="0.508" layer="1"/>
-<via x="93.98" y="43.18" extent="1-16" drill="0.35"/>
-<wire x1="93.98" y1="45.72" x2="91.44" y2="48.26" width="0.508" layer="16"/>
-<wire x1="93.98" y1="45.72" x2="93.98" y2="43.18" width="0.508" layer="16"/>
-<wire x1="91.44" y1="48.26" x2="83.82" y2="48.26" width="0.508" layer="16"/>
+<wire x1="83.82" y1="48.26" x2="91.44" y2="48.26" width="0.508" layer="16"/>
 <wire x1="83.82" y1="48.26" x2="82.55" y2="49.53" width="0.508" layer="16"/>
 <wire x1="82.55" y1="49.53" x2="82.55" y2="50.8" width="0.508" layer="16"/>
-<wire x1="82.55" y1="50.8" x2="82.55" y2="58.42" width="0.508" layer="16"/>
-<wire x1="82.55" y1="58.42" x2="81.28" y2="59.69" width="0.508" layer="16"/>
-<wire x1="81.28" y1="59.69" x2="80.01" y2="59.69" width="0.508" layer="16"/>
 <wire x1="77.47" y1="45.72" x2="80.01" y2="48.26" width="0.508" layer="16"/>
 <wire x1="80.01" y1="48.26" x2="80.01" y2="49.53" width="0.508" layer="16"/>
 <wire x1="80.01" y1="49.53" x2="81.28" y2="50.8" width="0.508" layer="16"/>
-<wire x1="81.28" y1="50.8" x2="82.55" y2="50.8" width="0.508" layer="16"/>
-<wire x1="76.2" y1="50.8" x2="77.47" y2="50.8" width="0.508" layer="1"/>
-<wire x1="77.47" y1="50.8" x2="82.55" y2="50.8" width="0.508" layer="1"/>
 <wire x1="69.85" y1="45.72" x2="72.39" y2="48.26" width="0.508" layer="1"/>
 <wire x1="72.39" y1="48.26" x2="73.66" y2="48.26" width="0.508" layer="1"/>
 <wire x1="73.66" y1="48.26" x2="73.66" y2="49.53" width="0.508" layer="1"/>
 <wire x1="73.66" y1="49.53" x2="74.93" y2="50.8" width="0.508" layer="1"/>
-<wire x1="74.93" y1="50.8" x2="76.2" y2="50.8" width="0.508" layer="1"/>
-<wire x1="80.01" y1="59.69" x2="80.42" y2="59.69" width="0" layer="19" extent="1-16"/>
+<wire x1="81.28" y1="50.8" x2="82.55" y2="50.8" width="0.508" layer="16"/>
+<wire x1="82.55" y1="50.8" x2="82.55" y2="55.88" width="0.508" layer="16"/>
+<wire x1="82.55" y1="55.88" x2="86.36" y2="59.69" width="0.508" layer="16"/>
+<via x="86.36" y="59.69" extent="1-16" drill="0.35"/>
+<wire x1="86.36" y1="59.69" x2="80.42" y2="59.69" width="0.508" layer="1"/>
+<wire x1="74.93" y1="50.8" x2="82.55" y2="50.8" width="0.508" layer="1"/>
+<wire x1="91.44" y1="48.26" x2="92.71" y2="46.99" width="0.508" layer="16"/>
+<wire x1="92.71" y1="46.99" x2="92.71" y2="40.64" width="0.508" layer="16"/>
+<wire x1="92.71" y1="40.64" x2="93.98" y2="39.37" width="0.508" layer="16"/>
+<via x="93.98" y="39.37" extent="1-16" drill="0.35"/>
+<wire x1="93.98" y1="39.37" x2="96.52" y2="39.37" width="0.508" layer="1"/>
+<wire x1="96.52" y1="39.37" x2="96.52" y2="43.83" width="0.508" layer="1"/>
 </signal>
 <signal name="RST">
 <contactref element="RESET1" pad="P$2"/>
