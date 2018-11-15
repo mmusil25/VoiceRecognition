@@ -11946,7 +11946,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="VCC" width="0.05" drill="0">
+</class>
+<class number="1" name="GND" width="0.00126875" drill="0">
 </class>
 </classes>
 <parts>
@@ -12095,7 +12097,7 @@ Microprocessor</text>
 <wire x1="274.32" y1="142.24" x2="208.28" y2="142.24" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="208.28" y1="142.24" x2="208.28" y2="185.42" width="0.1524" layer="97" style="shortdash"/>
 <text x="35.56" y="177.8" size="1.778" layer="97">NC</text>
-<text x="241.3" y="25.4" size="1.778" layer="97">R1, R2, R3, R5, R6, R7:
+<text x="241.3" y="15.24" size="1.778" layer="97">R1, R2, R3, R5, R6, R7:
 250mW, 1% TOL
 
 C1, C2:
